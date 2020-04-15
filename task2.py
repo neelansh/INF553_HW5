@@ -54,7 +54,7 @@ def flajolet_martin(input_file_path, stream_size, num_of_asks, output_file_path)
                 if(number_of_trailing_zeros > max_number_of_trainling_zeros[i]):
                     max_number_of_trainling_zeros[i] = number_of_trailing_zeros
         count = calculate_count(max_number_of_trainling_zeros)
-        output_file.write("{},{},{}\n".format(it, stream_size, count))
+        output_file.write("{},{},{}\n".format(it, stream_size, int(count)))
         predicted_sum += count
         actual_sum += stream_size
     print(predicted_sum/actual_sum)
